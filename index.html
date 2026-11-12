@@ -41,6 +41,7 @@ input[type=number].on{border-color:var(--accent);border-width:3px}
 .slot.fill{border-color:var(--accent)}
 .tiles{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:6px auto 14px;max-width:640px}
 .tile{width:64px;height:64px;font-size:34px;padding:0;border-radius:12px}
+.hint{text-align:center;font-size:16px;color:var(--sub);margin:-6px 0 10px}
 .fb{text-align:center;min-height:120px;margin-top:16px}
 .fb .mark{font-size:60px;line-height:1.2;font-weight:700}
 .fb.ok .mark{color:var(--ok)}
@@ -131,10 +132,11 @@ input[type=number].on{border-color:var(--accent);border-width:3px}
     <button class="sub" id="quit">やめる</button>
   </div>
   <div class="word" id="word"></div>
+  <p class="hint">ひらがなで、ことばぜんぶの <ruby>読<rt>よ</rt></ruby>みを <ruby>書<rt>か</rt></ruby>きます（<ruby>送<rt>おく</rt></ruby>りがなも <ruby>書<rt>か</rt></ruby>きます）</p>
 
   <div id="typeArea">
     <div class="ansrow">
-      <input id="kb" type="text" lang="ja" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="ひらがなで">
+      <input id="kb" type="text" lang="ja" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
       <button class="main" id="sendKb">こたえる</button>
     </div>
   </div>
