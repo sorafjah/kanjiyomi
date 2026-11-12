@@ -41,7 +41,7 @@ input[type=number].on{border-color:var(--accent);border-width:3px}
 .slot.fill{border-color:var(--accent)}
 .tiles{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:6px auto 14px;max-width:640px}
 .tile{width:64px;height:64px;font-size:34px;padding:0;border-radius:12px}
-.hint{text-align:center;font-size:16px;color:var(--sub);margin:-6px 0 10px}
+.hint{text-align:center;font-size:17px;color:var(--sub);margin:10px 0 0}
 .fb{text-align:center;min-height:120px;margin-top:16px}
 .fb .mark{font-size:60px;line-height:1.2;font-weight:700}
 .fb.ok .mark{color:var(--ok)}
@@ -132,7 +132,6 @@ input[type=number].on{border-color:var(--accent);border-width:3px}
     <button class="sub" id="quit">やめる</button>
   </div>
   <div class="word" id="word"></div>
-  <p class="hint">ひらがなで、ことばぜんぶの <ruby>読<rt>よ</rt></ruby>みを <ruby>書<rt>か</rt></ruby>きます（<ruby>送<rt>おく</rt></ruby>りがなも <ruby>書<rt>か</rt></ruby>きます）</p>
 
   <div id="typeArea">
     <div class="ansrow">
@@ -151,6 +150,7 @@ input[type=number].on{border-color:var(--accent);border-width:3px}
     </div>
   </div>
 
+  <p class="hint">ひらがなで、ことばぜんぶの <ruby>読<rt>よ</rt></ruby>みを <ruby>書<rt>か</rt></ruby>きましょう（<ruby>送<rt>おく</rt></ruby>りがなも <ruby>書<rt>か</rt></ruby>きましょう）</p>
   <div class="fb" id="fb"></div>
 </div>
 
@@ -342,7 +342,7 @@ function sheetHTML(items,start,page,pages,answer){
   return `<div class="sheet">
     <div class="sh-head"><div class="sh-title">${title}<span class="sh-cond">${condLabel()}</span></div>
       ${answer?'':`<div class="sh-name">${rb('名前','なまえ')}<span class="nbox"></span></div>`}</div>
-    <p class="sh-inst">${answer?'':`つぎの ${rb('漢字','かんじ')}の ${rb('読','よ')}みを ひらがなで ${rb('書','か')}きましょう。`}</p>
+    <p class="sh-inst">${answer?'':`ひらがなで、ことばぜんぶの ${rb('読','よ')}みを ${rb('書','か')}きましょう（${rb('送','おく')}りがなも ${rb('書','か')}きましょう）。`}</p>
     <div class="grid" style="--rows:${PER_PAGE/2}">${cells}</div>
     <div class="sh-foot"><span>${answer?'こたえ ':''}${page} / ${pages}</span><span>データ：JMdict / KANJIDIC2（EDRDG, CC BY-SA 4.0）</span></div>
   </div>`;
